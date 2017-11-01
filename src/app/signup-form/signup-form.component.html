@@ -1,0 +1,23 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input formControlName="username" id="username" type="text" class="form-control">
+        <div *ngIf="username.touched && username.invalid" class="alert alert-danger">
+            <div *ngIf="username.errors.required">Username is required.</div>
+            <div *ngIf="username.errors.minlength">Username minimum length validation rule violated.</div>
+            <div *ngIf="username.errors.cannotContainSpace">Username cannot contain a whitespace.</div>
+            <div *ngIf="username.errors.pattern">Username pattern validation rule violated.</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input formControlName="password" id="password" type="password" class="form-control">
+        <div *ngIf="password.touched && username.invalid" class="alert alert-danger">
+            <div *ngIf="password.errors.required">Password is required.</div>
+            <div *ngIf="password.errors.minlength">Password minimum length validation rule violated.</div>
+            <div *ngIf="password.errors.cannotContainSpace">Password cannot contain a whitespace.</div>
+            <div *ngIf="password.errors.pattern">Password pattern validation rule violated.</div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>

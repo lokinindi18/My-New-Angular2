@@ -10,8 +10,10 @@ export class AppComponent {
 
   myPost = {
     title: 'MyPostTitle',
-    isFavorite: false
-  }
+    isFavorite: false,
+    isliked: true,
+    likescount: 10
+  };
 
   someDummyMethod() {
     console.log('Hello !!!' + this.title);

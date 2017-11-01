@@ -1,8 +1,8 @@
 .glyphicon {
     color: #ccc;
-    cursor: pointer;
+    cursor: progress;
 }
 
 .highlighted {
-    color: green;
+    color: deeppink;
 }

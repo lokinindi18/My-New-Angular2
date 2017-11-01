@@ -1,0 +1,18 @@
+.zippy {
+    border: 1px solid;
+    border-color: black;
+}
+
+.zippy-header {
+    padding: 10px;
+    background: #cccc;
+    cursor: pointer;
+}
+
+.zippy-body {
+    padding: 10px;
+}
+
+.glyphicon {
+    float: right;
+}
