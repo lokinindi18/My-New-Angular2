@@ -11,10 +11,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ChangePasswordComponent {
 
   form = new FormGroup({
-    'oldpassword': new FormControl('', [Validators.required, PasswordValidator.asyncInvalid]),
+    'oldpassword': new FormControl('', Validators.required, PasswordValidator.asyncInvalid),
     'newpassword': new FormControl('', [Validators.required, Validators.minLength(3)]),
     'confirmpassword': new FormControl('', [Validators.required, Validators.minLength(3)]),
-  });
+  }, PasswordValidator.formValidator);
 
   get oldpassword() {
     return this.form.get('oldpassword');
