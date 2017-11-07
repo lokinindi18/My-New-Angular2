@@ -1,0 +1,50 @@
+<div class="thumbnail">
+    <img src="assets/images/{{ card.image }}.jpg">
+    <div>
+        <div *ngIf="!card.showDetails">
+            <h4>
+                <span class="label label-primary">
+              {{ card.type }}
+            </span>
+            </h4>
+            <h3>
+                <i class="glyphicon glyphicon-tag"></i> {{ card.price | currency:'USD':true }}
+            </h3>
+            <h4>
+                <i class="glyphicon glyphicon-home"></i> {{ card.address }}
+            </h4>
+
+            <hr>
+
+            <button class="btn btn-sm btn-success" *ngIf="!card.showDetails" (click)="card.showDetails = !card.showDetails">
+            Details
+          </button>
+
+        </div>
+
+        <div *ngIf="card.showDetails">
+            <div>
+                <h4>
+                    <span class="label label-primary">
+                    Beds: {{ card.bedrooms }}
+                  </span>
+                    <span class="label label-primary">
+                    Baths: {{ card.bathrooms }}
+                  </span>
+                    <span class="label label-primary">
+                    SqFt: {{ card.area }}
+                  </span>
+                </h4>
+
+                <p>{{ card.description }}</p>
+
+                <hr>
+
+                <button class="btn btn-sm btn-danger" (click)="card.showDetails = !card.showDetails">
+                Close
+              </button>
+
+            </div>
+        </div>
+    </div>
+</div>

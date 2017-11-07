@@ -1,8 +1,5 @@
 .img-circle {
-    border-radius: 50%;
-}
-
-.aligntop {
-    text-align: center;
-    vertical-align: top;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
 }

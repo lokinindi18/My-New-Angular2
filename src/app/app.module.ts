@@ -1,3 +1,4 @@
+import { ListingService } from './services/listing/listing.service';
 import { FollowerService } from './services/followers/follower.service';
 import { AppGlobalErrorHandler } from './common/errors/app.global.error';
 import { ErrorHandler } from '@angular/core';
@@ -15,6 +16,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostComponent } from './post/post.component';
 import { FollowerComponent } from './follower/follower.component';
+import { ListingComponent } from './listing/listing.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { FollowerComponent } from './follower/follower.component';
     SignupFormComponent,
     ChangePasswordComponent,
     PostComponent,
-    FollowerComponent
+    FollowerComponent,
+    ListingComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import { FollowerComponent } from './follower/follower.component';
     HttpModule
   ],
   providers: [
-    PostsService, FollowerService,
+    PostsService, FollowerService, ListingService,
     { provide: ErrorHandler, useClass: AppGlobalErrorHandler }
   ],
   bootstrap: [AppComponent]

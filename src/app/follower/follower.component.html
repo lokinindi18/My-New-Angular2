@@ -1,18 +1,12 @@
-<div class="container">
-    <h1> My Followers </h1>
-    <br>
-    <div class="row" *ngFor="let follower of followers">
-        <br>
-        <div class="col-md-2">
-            <img width="60%" [src]="follower.avatar_url" class="img-circle">
-        </div>
-        <div class="col-md-4 aligntop">
-            <div>
-                <h2>{{follower.login}}</h2>
-            </div>
-            <div>
-                <a [href]="follower.html_url">{{follower.html_url}}</a>
-            </div>
-        </div>
+<!-- copied bootstrap theme for media from -->
+<div class="media" *ngFor="let follower of followers">
+    <div class="media-left">
+        <a href="#">
+            <img class="media-object img-circle" [src]="follower.avatar_url" alt="...">
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">{{follower.login}}</h4>
+        <a [href]="follower.html_url">{{follower.html_url}}</a>
     </div>
 </div>
